@@ -1,0 +1,7 @@
+<p>posts works!</p>
+
+<h1 *ngIf="isLoading$ | async">Loading...</h1>
+<div *ngIf="error$ | async as error">{{error}}</div>
+<ol>
+  <li *ngFor="let post of posts$ | async">{{post.title}}</li>
+</ol>
